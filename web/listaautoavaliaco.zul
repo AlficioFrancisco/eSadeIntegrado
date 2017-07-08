@@ -1,0 +1,53 @@
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/lateralmenu.zul" ?>
+
+<zk >
+    
+        
+    <div self="@define(conteudo)"  
+    apply="org.zkoss.bind.BindComposer" viewModel= "@id('vm') @init('controlpg.Controlpg')">
+       
+    
+        <!--<window title="LISTA DE PARAMETROS PARA AUTO AVALIACAO" >-->
+       
+        <listbox width="1000px" height="500px"  mold="paging"  emptyMessage="Nao ha Questoes cadastradas." pageSize="10"
+                     model="@bind(vm.listaAuto)"> 
+            <listhead>
+                <listheader>Professor</listheader>
+                <listheader>Disciplina</listheader>
+                <listheader>Pontuacao</listheader>
+                <listheader>Data</listheader>
+                <listheader>Observacao</listheader>
+               
+                    
+            </listhead>
+            <template name="model">
+                <listitem>
+    
+        
+                  
+                    <listcell label="@load(each.idprofessor.nome)"></listcell>
+          
+                    <listcell label="@load(each.iddisciplina.descricao)"></listcell>
+                    <listcell label="@load(each.pontuacaototal)"></listcell>
+          
+                    <listcell label="@load(each.ano)"></listcell>
+                    <listcell label="@load(each.observacao)"></listcell>
+                    <listcell >
+                        <button  label="Editar"> </button>
+                             
+                    </listcell>
+                    
+          
+                </listitem>
+            </template>
+           
+       
+        
+       
+   
+        </listbox>
+        
+    
+    </div>
+</zk>
+

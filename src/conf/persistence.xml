@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="e_sadePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>modelo.Pontuacaodocenteestudante</class>
+    <class>modelo.Questaodocenteestudante</class>
+    <class>modelo.Parametroautoavaliacao</class>
+    <class>modelo.Avaliacaodocentesuperior</class>
+    <class>modelo.Parametrodocenteestudante</class>
+    <class>modelo.Questaoautoavaliacao</class>
+    <class>modelo.Departamento</class>
+    <class>modelo.Regime</class>
+    <class>modelo.Caracteristiquestaosuperior</class>
+    <class>modelo.Pontuacaosuperiorhierarquico</class>
+    <class>modelo.Questaodocentesuperior</class>
+    <class>modelo.Pontuacaoconjugada</class>
+    <class>modelo.Autoavaliacao</class>
+    <class>modelo.Categoriaa</class>
+    <class>modelo.Avaliacaodocenteestudante</class>
+    <class>modelo.Pauta</class>
+    <class>modelo.Tipodocumento</class>
+    <class>modelo.Tipochefia</class>
+    <class>modelo.Bolsa</class>
+    <class>modelo.Endereco</class>
+    <class>modelo.Areacientifica</class>
+    <class>modelo.Precedencia</class>
+    <class>modelo.Validacaopendente</class>
+    <class>modelo.Estadocivil</class>
+    <class>modelo.Enderecof</class>
+    <class>modelo.Operacao</class>
+    <class>modelo.Pais</class>
+    <class>modelo.Ingressoexameadmissao</class>
+    <class>modelo.Ingressotransferencia</class>
+    <class>modelo.Planoavaliacao</class>
+    <class>modelo.Planomatriculas</class>
+    <class>modelo.Faculdade</class>
+    <class>modelo.Estudante</class>
+    <class>modelo.Caracter</class>
+    <class>modelo.Item</class>
+    <class>modelo.Provincia</class>
+    <class>modelo.Documento</class>
+    <class>modelo.Matriculaanulada</class>
+    <class>modelo.Curso</class>
+    <class>modelo.NotapautaOld</class>
+    <class>modelo.Notificacao</class>
+    <class>modelo.Ingressomudancauniversidade</class>
+    <class>modelo.Viaingresso</class>
+    <class>modelo.Roles</class>
+    <class>modelo.Permissao</class>
+    <class>modelo.Cargochefia</class>
+    <class>modelo.PlanificacaoAnoLectivo</class>
+    <class>modelo.Users</class>
+    <class>modelo.Matricula</class>
+    <class>modelo.Mudancacurso</class>
+    <class>modelo.Docente</class>
+    <class>modelo.Sexo</class>
+    <class>modelo.Funcionario</class>
+    <class>modelo.Operacaopedido</class>
+    <class>modelo.Profissao</class>
+    <class>modelo.Usergrupo</class>
+    <class>modelo.Ingressopercabolsa</class>
+    <class>modelo.Disciplinaanulada</class>
+    <class>modelo.Notapauta</class>
+    <class>modelo.Categoria</class>
+    <class>modelo.Periodo</class>
+    <class>modelo.Lecciona</class>
+    <class>modelo.Disciplina</class>
+    <class>modelo.Especial</class>
+    <class>modelo.Grupo</class>
+    <class>modelo.Motivomat</class>
+    <class>modelo.Ingressobolseiro</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/integra"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="1906paul"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,66 @@
+<?page title="e-SADE" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+<a style="font-size:10px" href="index.zul" >Sair</a>
+
+<style>
+.banner{
+background-color:#D1e2ec;
+color:#191970;
+padding:5px 10px;
+}
+
+</style>
+
+<borderlayout>
+
+<north height="100px" class="banner">
+
+<div>
+<hbox align="center">
+<a>
+
+<image src="/logo.PNG" height="90px"></image>
+</a>
+<div>
+<label style="font-size:30px">Sistema de Avaliação de Desempenho</label>
+
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+
+</hbox>
+
+</div>
+
+</north>
+<west>
+
+ 
+</west>
+
+
+
+<center self="@insert(conteudo)" >
+
+</center>
+
+
+</borderlayout>
+
+
+</zk>

@@ -1,0 +1,92 @@
+<?init class="org.zkoss.zk.ui.util.Composition" arg0="/menuadministrador.zul" ?>
+
+<zk >
+    
+        
+    <div self="@define(conteudo)"  apply="org.zkoss.bind.BindComposer" viewModel= "@id('vm') @init('controlpg.Controlpg')" id="editgrupos">
+       
+    
+        <!--<window title="LISTA DE PARAMETROS PARA AUTO AVALIACAO" >-->
+        <button label="Novo Grupo" onClick="@command('wingrupo')"></button>
+        <listbox width="1000px" height="500px"  mold="paging"  emptyMessage="Nao ha Questoes cadastradas." pageSize="10"
+                     model="@bind(vm.listaGrupo)"> 
+            <listhead>
+                <listheader>Grupo do Utilizador</listheader>
+                <listheader>Tarefa</listheader>
+                <listheader>Editar</listheader>
+                <listheader>Remover</listheader>
+                    
+            </listhead>
+            <template name="model">
+                <listitem>
+    
+        
+                  
+                    <listcell label="@load(each.idGrupo)"></listcell>
+          
+                    <listcell label="@load(each.descricao)"></listcell>
+                    <listcell >
+                        <button  label="Editar" onClick="@command('wingrupo')"> </button>
+                             
+                    </listcell>
+                    <listcell >
+                        <button  class="btn-primary dropdown-toggle" label="Remover"> </button>
+                             
+                    </listcell>
+           
+          
+                </listitem>
+            </template>
+           
+       
+        
+       
+   
+        </listbox>
+        
+    
+    
+        <window id="wingrupo"   height="200px" width="500px"  title="CADASTRO DO GRUPO DE UTILIZADOR"
+                position="center, center" closable="true" mode="modal" visible="false" 
+                onClose="self.visible=false;event.stopPropagation()" apply="controlpg.parametroauto">
+            <vbox>
+                <grid ><!--viewModel= "@id('vm') @init('controlpg.Autoavaliacao')"-->
+                    <columns>
+                        <column label=""/>
+                        <column label=""/>
+                    </columns>
+                    <rows>
+                        <row>
+                            <cell>Grupo </cell>
+                            <cell>
+                                <div sclass="input-group">
+                                    <textbox sclass="form-control"  id="grupo" />
+                                </div>                       <!--id="codigo" value="@bind(vm.parametro.codigo)"/>-->
+                            </cell>	
+                        </row>
+                        <row>
+                            
+                            <cell>Descricao</cell>
+                            <cell>
+                                <div sclass="input-group">
+                                    <textbox sclass="form-control"  id="descricao" rows="3"/> 
+                                </div><!--id="descricao" value="@bind(vm.parametro.descricao)"/>-->
+                            </cell>	
+                        </row>
+                    
+                    </rows>
+                </grid>
+                <hlayout>
+            
+                <button sclass="btn-primary"  label="Guardar" tooltiptext="Guardar" id="addgrupo"> </button>
+                 <button sclass="btn-primary"  label="Editar" tooltiptext="Guardar" id="editgrupo"> </button>  <!--id="cadastrar" onClick="@command('gravaparametro')"-->
+                </hlayout>
+
+           
+            </vbox>
+            
+        </window>
+    </div>
+</zk>
+
+

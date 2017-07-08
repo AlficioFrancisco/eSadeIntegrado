@@ -1,0 +1,82 @@
+<?page title="menu" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" ?>
+<zk>
+<a style="font-size:10px" href="index.zul" >Sair</a>
+<style>
+.banner{
+background-color:#D1e2ec;
+color:#191970;
+padding:5px 10px;
+}
+
+</style>
+
+<borderlayout>
+
+<north height="100px" class="banner">
+<div>
+<hbox align="center">
+<a>
+
+<image src="/logo.PNG" height="90px"></image>
+</a>
+<div>
+<label style="font-size:30px">Sistema de Avaliação de Desempenho</label>
+
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+
+</hbox>
+
+</div>
+
+</north>
+<west >
+    
+    <grid>
+		<columns >
+                    <column width="250px" height="100px" ></column>
+			<column label=""/>
+		</columns>
+		<rows>
+			<row>
+                            <a image="/lista.png" href="listaautoavaliaco.zul">Lista de Auto Avaliacao</a> 	
+			</row>
+                        <row>
+                          <a image="/lista.png" href="listadocenteestudante.zul">Lista de Avaliacao Pelo Estudante</a>   	
+			</row>
+                        <row>
+                          <a image="/lista.png" href="listaavaliasuperior.zul">Lista de Avaliacao pelo superior Hierarquico</a>	
+			</row>
+		</rows>
+	</grid>
+
+</west>
+
+
+
+<center self="@insert(conteudo)" >
+
+</center>
+
+
+</borderlayout>
+
+
+</zk>
+ 

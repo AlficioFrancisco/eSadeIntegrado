@@ -1,0 +1,88 @@
+<?page title="menu" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <a style="font-size:10px" href="index.zul" >Sair</a>
+    <style>
+        .banner{
+        background-color:#D1e2ec;
+        color:#191970;
+        padding:5px 10px;
+        }
+
+    </style>
+
+    <borderlayout>
+
+        <north height="100px" class="banner">
+            <div>
+                <hbox align="center">
+                    <a>
+
+                        <image src="/logo.PNG" height="90px"></image>
+                    </a>
+                    <div>
+                        <label style="font-size:30px">Sistema de Avaliação de Desempenho</label>
+
+                    </div>
+                    <div>
+
+                        <label ></label>
+                    </div>
+                    <div>
+
+                        <label ></label>
+                    </div>
+                    <div>
+
+                        <label ></label>
+                    </div>
+                    <div>
+
+                        <label ></label>
+                    </div>
+
+                </hbox>
+
+            </div>
+
+        </north>
+        <west>
+    
+            <div height="200px" apply="org.zkoss.bind.BindComposer" viewModel= "@id('vm') @init('controlpg.Controlpg')">   
+                <window title="Lista de Professors" border="normal" height="700px">
+                    <hbox>
+                        Pesquisar:
+                        <textbox id="searchArea" width="200px"  class="form-control"  placeholder="Pesquisar Professor..."/>
+                    </hbox>   
+                    <listbox width="300px" height="400px" rows="5" mold="paging"  emptyMessage="Nao ha Professor cadastradas." pageSize="5"
+                             model="@bind(vm.listadocente)" id="box" multiple="true"  > 
+                        <listhead>
+                            <listheader>Nome Do Docente</listheader>
+
+               
+                        </listhead>
+                        <template name="model">
+                            <listitem>
+                    
+                                <listcell label="@load(each.nome)"></listcell>
+                                        
+                            </listitem>
+                        </template>
+                    </listbox>
+                    <button width="300px" label="CONFERIR AVALIACAO"></button>
+                </window>
+            </div>
+
+        </west>
+
+
+
+        <center self="@insert(conteudo)" >
+
+        </center>
+
+
+    </borderlayout>
+
+
+</zk>
+ 

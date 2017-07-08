@@ -1,0 +1,88 @@
+<?page title="menu" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zk.ui.util.Composition" ?>
+<zk>
+<a style="font-size:10px" href="index.zul" >Sair</a>
+<style>
+.banner{
+background-color:#D1e2ec;
+color:#191970;
+padding:5px 10px;
+}
+
+</style>
+
+<borderlayout>
+
+<north height="100px" class="banner">
+<div>
+<hbox align="center">
+<a>
+
+<image src="/logo.PNG" height="90px"></image>
+</a>
+<div>
+<label style="font-size:30px">Sistema de Avaliação de Desempenho</label>
+
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+<div>
+
+<label ></label>
+</div>
+
+</hbox>
+
+</div>
+
+</north>
+<west>
+    
+<div self="@{define(centro)}" apply="org.zkoss.bind.BindComposer" viewModel= "@id('vm') @init('controlpg.Controlpg')">   
+<window title="Lista de docentes" border="normal" height="700px" >
+    <radiogroup onCheck="choice.value = self.selectedItem.label">  
+<listbox width="300px" height="700px" rows="5" mold="paging"  emptyMessage="Nao ha Docentes cadastradas." pageSize="5"
+                 model="@bind(vm.listadocente)" multiple="true"  > 
+            <listhead>
+                <listheader>Nome Do Docente</listheader>
+
+               
+            </listhead>
+            <template name="model">
+                <listitem>
+                    
+                                        <listcell ><radio /></listcell>
+                                         <listcell label="@load(each.nome)"></listcell>
+                                        
+                                        
+                </listitem>
+            </template>
+        </listbox>
+ </radiogroup> 
+ </window>
+  </div>
+
+</west>
+
+
+
+<center self="@insert(conteudo)" >
+
+</center>
+
+
+</borderlayout>
+
+
+</zk>
+ 
